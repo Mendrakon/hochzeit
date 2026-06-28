@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   Theme – Farbpalette & Schriften (Tailwind v4, CSS-basiert)
+   ============================================================ */
+@theme {
+  --color-cream: #f5f0e8;
+  --color-olive: #6b6b3a;
+  --color-dark: #2a2317;
+  --color-sand: #c9b99a;
+  --color-warm-white: #faf7f2;
+
+  --font-display: var(--font-cormorant), serif;
+  --font-body: var(--font-jost), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================================
+   Basis-Stile
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  line-height: 1.8;
+}
+
+::selection {
+  background: var(--color-olive);
+  color: var(--color-warm-white);
+}
+
+/* Wiederverwendbare Hilfsklassen */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Caps-Label-Stil (Nav, kleine Überschriften) */
+.label {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+
+/* ============================================================
+   Scroll-triggered Fade-in (IntersectionObserver setzt .is-visible)
+   ============================================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================================
+   Scroll-Down-Pfeil Animation (Hero)
+   ============================================================ */
+@keyframes bounce-down {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-down {
+  animation: bounce-down 2s ease-in-out infinite;
 }
