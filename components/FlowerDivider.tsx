@@ -1,16 +1,17 @@
 type FlowerDividerProps = {
   className?: string;
-  /** Strichfarbe der Linien (Standard: sand) */
+  /** Strichfarbe der Seitenlinien (Standard: helles Salbeigrün) */
   color?: string;
 };
 
 /**
- * Dezenter Blüten-Divider: dünne Linien mit einer kleinen Blüte in der Mitte.
- * Inline-SVG, damit Farben per Prop an die jeweilige Sektion angepasst werden.
+ * Dezenter Blüten-Divider: dünne Salbei-Linien mit einer kleinen Blüte in der
+ * Mitte. Die Blütenblätter nehmen die Textfarbe (currentColor) der Sektion an,
+ * der winzige Mittelpunkt ist Bordeaux – der einzige sparsame Rot-Akzent.
  */
 export default function FlowerDivider({
   className = "",
-  color = "#C9B99A",
+  color = "var(--color-sage-light)",
 }: FlowerDividerProps) {
   return (
     <svg
@@ -31,7 +32,7 @@ export default function FlowerDivider({
         <path d="M102 20 C 96 16, 90 16, 86 20 C 90 24, 96 24, 102 20 Z" />
         <path d="M90 32 C 86 26, 86 20, 90 16 C 94 20, 94 26, 90 32 Z" />
       </g>
-      <circle cx="90" cy="20" r="2" fill="currentColor" />
+      <circle cx="90" cy="20" r="2" fill="var(--color-wine)" />
     </svg>
   );
 }

@@ -5,8 +5,8 @@ export default function Venue() {
     <section id="location" className="bg-cream py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn className="text-center">
-          <p className="label text-xs text-olive">Location</p>
-          <h2 className="mt-5 font-display text-4xl italic text-dark sm:text-5xl">
+          <p className="label text-xs text-sage-deep">Location</p>
+          <h2 className="mt-5 font-display text-4xl italic text-forest sm:text-5xl">
             Wo wir feiern
           </h2>
         </FadeIn>
@@ -25,7 +25,7 @@ export default function Venue() {
                   className="flex h-48 w-44 items-center justify-center sm:h-56 sm:w-52"
                   style={{
                     background:
-                      "linear-gradient(135deg, #C9B99A 0%, #6B6B3A 100%)",
+                      "linear-gradient(135deg, #A7B4A2 0%, #556B4E 100%)",
                   }}
                 >
                   <span className="label text-[0.6rem] text-warm-white/80">
@@ -39,22 +39,22 @@ export default function Venue() {
           {/* Rechte Spalte: Infos + Karte */}
           <FadeIn delay={150}>
             {/* TODO: Venue-Name & Adresse eintragen, sobald bekannt */}
-            <h3 className="font-display text-3xl italic text-dark">
+            <h3 className="font-display text-3xl italic text-forest">
               [Name der Location]
             </h3>
-            <p className="mt-4 text-base font-light leading-loose text-dark/75">
+            <p className="mt-4 text-base font-light leading-loose text-forest/75">
               [Straße &amp; Hausnummer]
               <br />
               [PLZ Ort], Österreich
             </p>
-            <p className="mt-6 text-sm font-light leading-loose text-dark/60">
+            <p className="mt-6 text-sm font-light leading-loose text-forest/60">
               {/* TODO: Hinweise zu Parken / Anreise ergänzen */}
               Parkplätze sind direkt vor Ort vorhanden. Details zur Anreise
               folgen rechtzeitig vor dem Fest.
             </p>
 
             {/* Statisches Map-Embed (Default: Wiener Neustadt) – später Adresse anpassen */}
-            <div className="mt-8 overflow-hidden border border-sand/60 shadow-md">
+            <div className="mt-8 overflow-hidden border border-sage-light/60 shadow-md">
               <iframe
                 title="Karte zur Location"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=16.20%2C47.79%2C16.30%2C47.84&layer=mapnik&marker=47.8149%2C16.2407"
@@ -63,7 +63,7 @@ export default function Venue() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-            <p className="mt-3 text-center text-[0.7rem] font-light text-dark/40">
+            <p className="mt-3 text-center text-[0.7rem] font-light text-forest/40">
               Vorläufige Kartenansicht (Raum Wiener Neustadt)
             </p>
           </FadeIn>

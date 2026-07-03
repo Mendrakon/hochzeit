@@ -27,35 +27,35 @@ export default function Itinerary({ withStandesamt = false }: ItineraryProps) {
     <section id="ablauf" className="bg-warm-white py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6">
         <FadeIn className="text-center">
-          <p className="label text-xs text-olive">Ablauf</p>
-          <h2 className="mt-5 font-display text-4xl italic text-dark sm:text-5xl">
+          <p className="label text-xs text-sage-deep">Ablauf</p>
+          <h2 className="mt-5 font-display text-4xl italic text-forest sm:text-5xl">
             Der Tag im Überblick
           </h2>
         </FadeIn>
 
         <FadeIn delay={150}>
           {/* Karte mit Spitzenrand-Optik (doppelter Rahmen + Blüten-Divider) */}
-          <div className="mt-14 border border-sand/70 bg-cream p-2">
-            <div className="border border-sand/50 px-6 py-12 sm:px-12">
-              <FlowerDivider className="mx-auto text-olive" color="#C9B99A" />
+          <div className="mt-14 border border-sage-light/70 bg-cream p-2">
+            <div className="border border-sage-light/50 px-6 py-12 sm:px-12">
+              <FlowerDivider className="mx-auto text-sage-deep" />
 
               <ul className="mt-10 space-y-7">
                 {items.map((item) => (
                   <li
                     key={item.time}
-                    className="flex items-baseline gap-5 border-b border-sand/30 pb-5 last:border-0 last:pb-0"
+                    className="flex items-baseline gap-5 border-b border-sage-light/30 pb-5 last:border-0 last:pb-0"
                   >
-                    <span className="font-display text-2xl italic text-olive sm:text-3xl">
+                    <span className="font-display text-2xl italic text-sage-deep sm:text-3xl">
                       {item.time}
                     </span>
-                    <span className="label text-xs text-dark/80 sm:text-sm">
+                    <span className="label text-xs text-forest/80 sm:text-sm">
                       {item.title}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <FlowerDivider className="mx-auto mt-10 text-olive" color="#C9B99A" />
+              <FlowerDivider className="mx-auto mt-10 text-sage-deep" />
             </div>
           </div>
         </FadeIn>

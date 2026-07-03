@@ -30,7 +30,7 @@ export default function Navbar({ withStandesamt = false }: NavbarProps) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-dark/95 py-3 shadow-lg backdrop-blur-sm"
+          ? "bg-forest/95 py-3 shadow-lg backdrop-blur-sm"
           : "bg-transparent py-5"
       }`}
     >
@@ -49,7 +49,7 @@ export default function Navbar({ withStandesamt = false }: NavbarProps) {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="label text-xs text-warm-white/80 transition-colors hover:text-sand"
+                className="label text-xs text-warm-white/80 transition-colors hover:text-rose"
               >
                 {link.label}
               </a>
@@ -85,7 +85,7 @@ export default function Navbar({ withStandesamt = false }: NavbarProps) {
 
       {/* Mobile-Dropdown */}
       <div
-        className={`overflow-hidden bg-dark/95 backdrop-blur-sm transition-[max-height] duration-500 lg:hidden ${
+        className={`overflow-hidden bg-forest/95 backdrop-blur-sm transition-[max-height] duration-500 lg:hidden ${
           open ? "max-h-80" : "max-h-0"
         }`}
       >
@@ -95,7 +95,7 @@ export default function Navbar({ withStandesamt = false }: NavbarProps) {
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="label text-sm text-warm-white/80 transition-colors hover:text-sand"
+                className="label text-sm text-warm-white/80 transition-colors hover:text-rose"
               >
                 {link.label}
               </a>

@@ -45,9 +45,9 @@ export default function Countdown() {
   }, []);
 
   return (
-    <section className="bg-dark py-24 text-warm-white sm:py-32">
+    <section className="bg-forest py-24 text-warm-white sm:py-32">
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <p className="label text-xs text-sand">Unser großer Tag in</p>
+        <p className="label text-xs text-rose">Unser großer Tag in</p>
 
         <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-4">
           {units.map(({ key, label }) => (
@@ -58,7 +58,7 @@ export default function Countdown() {
               >
                 {time ? String(time[key]).padStart(2, "0") : "––"}
               </span>
-              <span className="label mt-3 text-[0.65rem] text-sand sm:text-xs">
+              <span className="label mt-3 text-[0.65rem] text-rose sm:text-xs">
                 {label}
               </span>
             </div>

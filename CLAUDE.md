@@ -39,13 +39,19 @@ Der `/familie`-Link wird **nirgends öffentlich verlinkt** (und ist auf
 
 ### Farbpalette
 
-| Name         | Hex       | Verwendung                        |
-|--------------|-----------|-----------------------------------|
-| `--cream`    | `#F5F0E8` | Heller Hintergrund, Karten        |
-| `--olive`    | `#6B6B3A` | Akzentfarbe, Buttons, Divider     |
-| `--dark`     | `#2A2317` | Dunkle Sektionen, Navbar          |
-| `--sand`     | `#C9B99A` | Sekundärtext, dekorative Elemente |
-| `--warm-white`| `#FAF7F2`| Hero-Overlay-Text                 |
+Salbeigrün-dominiert mit Creme/Blush und **Bordeaux nur als sparsamer Akzent**
+(nach Moodboard). Definiert per `@theme` in `app/globals.css`.
+
+| Token (`--color-…`) | Hex       | Verwendung                                   |
+|---------------------|-----------|----------------------------------------------|
+| `wine`              | `#6E2A38` | Bordeaux – **nur sparsame Akzente** (Blüten-Mittelpunkt im Divider) |
+| `sage`              | `#8B9A84` | Salbeigrün (Gradients, Deko)                 |
+| `sage-light`        | `#A7B4A2` | Helles Salbei – dünne Linien, Rahmen, Divider |
+| `rose`              | `#D6B2A6` | Altrosa/Blush – Akzente auf dunklen Sektionen, Monogramm, Hover |
+| `cream`             | `#F3EAE2` | Heller Hintergrund                           |
+| `sage-deep`         | `#556B4E` | Tiefes Salbei – Akzenttext, Labels, Buttons (guter Kontrast) |
+| `forest`            | `#36433A` | Dunkle Sektionen (Navbar, Countdown, Footer) **und** Fließ-/Überschriftentext |
+| `warm-white`        | `#FAF6F1` | Hellster Ton – Karten, Text auf Dunkel       |
 
 ### Typografie
 
@@ -55,7 +61,7 @@ Der `/familie`-Link wird **nirgends öffentlich verlinkt** (und ist auf
 
 ### Stil
 
-- Warme Erdtöne, organisch, elegant – kein greller Kontrast
+- Salbeigrün, Creme & Blush, organisch, elegant – kein greller Kontrast; Bordeaux sehr sparsam
 - Scroll-triggered Fade-in Animationen (subtle, `IntersectionObserver`)
 - Mobile-first, vollständig responsiv
 - Sparsame Dekoelemente: dünne Linien, kleine Blüten-SVGs als Divider
@@ -66,7 +72,7 @@ Der `/familie`-Link wird **nirgends öffentlich verlinkt** (und ist auf
 ## Seitenstruktur
 
 ### 1. Hero Section
-- Vollbild-Hintergrundbild (aktuell: Placeholder-Gradient in Olivgrün/Dunkelbraun)
+- Vollbild-Hintergrundbild (aktuell: Placeholder-Gradient in Salbeigrün → dunkles Salbei)
 - Overlay-Text:
   ```
   DIE HOCHZEIT VON
@@ -84,7 +90,7 @@ Der `/familie`-Link wird **nirgends öffentlich verlinkt** (und ist auf
 - Unterschrift: *Andi & Lili*
 
 ### 3. Countdown
-- Dunkler Hintergrund (`--dark`)
+- Dunkler Hintergrund (`forest`)
 - Überschrift: *„Noch"* oder *„Unser großer Tag in..."*
 - Live-Countdown in Tagen / Stunden / Minuten / Sekunden
 - Zieldatum: `2026-09-11T00:00:00`

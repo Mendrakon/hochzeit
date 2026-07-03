@@ -4,25 +4,25 @@ export default function Hero() {
       id="start"
       className="relative flex h-screen min-h-[600px] items-center justify-center overflow-hidden"
     >
-      {/* TODO: Hero-Bild ersetzen – aktuell olivgrün/dunkelbrauner Gradient-Placeholder.
+      {/* TODO: Hero-Bild ersetzen – aktuell ein Salbeigrün-Gradient-Placeholder.
           Später echtes Foto unter public/hero.jpg ablegen und hier als <Image fill /> einbinden. */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 120% at 50% 20%, #6B6B3A 0%, #4a4a2a 40%, #2A2317 100%)",
+            "radial-gradient(120% 120% at 50% 20%, #8B9A84 0%, #556B4E 45%, #36433A 100%)",
         }}
         aria-hidden="true"
       />
       {/* Abdunkelndes Overlay für bessere Textlesbarkeit */}
-      <div className="absolute inset-0 bg-dark/30" aria-hidden="true" />
+      <div className="absolute inset-0 bg-forest/30" aria-hidden="true" />
 
       <div className="relative z-10 px-6 text-center text-warm-white">
-        <p className="label mb-6 text-xs text-sand sm:text-sm">
+        <p className="label mb-6 text-xs text-rose sm:text-sm">
           Die Hochzeit von
         </p>
         <h1 className="font-display text-6xl italic leading-none sm:text-7xl lg:text-8xl">
-          Andi <span className="not-italic text-sand">&amp;</span> Lili
+          Andi <span className="not-italic text-rose">&amp;</span> Lili
         </h1>
         <div className="mx-auto mt-8 flex max-w-xs items-center justify-center gap-4">
           <span className="h-px flex-1 bg-warm-white/40" />

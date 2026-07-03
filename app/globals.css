@@ -4,11 +4,17 @@
    Theme – Farbpalette & Schriften (Tailwind v4, CSS-basiert)
    ============================================================ */
 @theme {
-  --color-cream: #f5f0e8;
-  --color-olive: #6b6b3a;
-  --color-dark: #2a2317;
-  --color-sand: #c9b99a;
-  --color-warm-white: #faf7f2;
+  /* Hauptfarben (nach Moodboard) */
+  --color-wine: #6e2a38; /* Bordeaux – nur sparsame Akzente */
+  --color-sage: #8b9a84; /* Salbeigrün */
+  --color-sage-light: #a7b4a2; /* helles Salbeigrün – Linien, Deko */
+  --color-rose: #d6b2a6; /* Altrosa / Blush */
+  --color-cream: #f3eae2; /* Creme – heller Hintergrund */
+
+  /* Funktionale Ableitungen für Lesbarkeit & Kontrast */
+  --color-sage-deep: #556b4e; /* tiefes Salbei – Akzenttext, Buttons */
+  --color-forest: #36433a; /* dunkle Sektionen & Fließtext */
+  --color-warm-white: #faf6f1; /* hellster Ton – Karten, Text auf Dunkel */
 
   --font-display: var(--font-cormorant), serif;
   --font-body: var(--font-jost), sans-serif;
@@ -27,7 +33,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-olive);
+  background: var(--color-sage-deep);
   color: var(--color-warm-white);
 }
 
