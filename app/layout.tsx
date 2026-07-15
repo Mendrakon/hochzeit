@@ -23,6 +23,8 @@ export const metadata: Metadata = {
   title: "Andi & Lili · 11. September 2026",
   description:
     "Die Hochzeit von Andi & Lili am 11. September 2026. Alle Infos zu Ablauf, Location und RSVP.",
+  // Private Hochzeitsseite – nicht in Suchmaschinen indexieren
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

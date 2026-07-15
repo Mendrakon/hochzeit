@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Zwei ineinander verschlungene Eheringe – Andi & Lili -->
+  <!-- Salbei-Ring (links, unten) -->
+  <circle cx="25" cy="36" r="13" stroke="#556B4E" stroke-width="5" />
+  <!-- Blush-Ring (rechts, oben), liegt an beiden Kreuzungen über dem Salbei-Ring -->
+  <circle cx="39" cy="28" r="13" stroke="#D6B2A6" stroke-width="5" />
+  <!-- Salbei-Bogen an der oberen Kreuzung wieder über dem Blush-Ring:
+       ergibt den echten Verschlungen-/Weave-Effekt (Koordinaten liegen exakt auf dem Salbei-Ring) -->
+  <path
+    d="M 23.87 23.05 A 13 13 0 0 1 30.49 24.22"
+    stroke="#556B4E"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+</svg>
