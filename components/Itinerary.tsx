@@ -1,27 +1,39 @@
 import FadeIn from "./FadeIn";
 import FlowerDivider from "./FlowerDivider";
 
-// TODO: Zeiten und Programmpunkte sind Platzhalter → einfach hier anpassen
-
-// Nur für die engsten Verwandten (Familien-Variante /familie)
-const standesamt = { time: "14:00", title: "Standesamtliche Trauung" };
-
-// Programm für alle Gäste
+// Der komplette Ablauf des Hochzeitstags (11.09.2026), 10:30–16:00 Uhr.
+// Die Vormittags-Punkte (Standesamt, Trauung, Familienfotos) sind nur für die
+// engsten Verwandten → familyOnly. Ab 14:30 Uhr sind ALLE Gäste dabei.
+// Interne Planungsnotizen (Telefonnummern, Fahrhinweise) bewusst weggelassen.
 const schedule = [
-  { time: "15:00", title: "Sektempfang" },
-  { time: "16:30", title: "Fotos" },
-  { time: "18:00", title: "Abendessen" },
-  { time: "20:00", title: "Tortenanschnitt" },
-  { time: "21:00", title: "Party" },
+  {
+    time: "10:30",
+    title: "Ankunft im Standesamt Siegendorf",
+    familyOnly: true,
+  },
+  { time: "11:00", title: "Beginn der Trauung", familyOnly: true },
+  { time: "11:30", title: "Gratulationen", familyOnly: true },
+  {
+    time: "12:00",
+    title: "Mittagessen für die Gäste",
+    note: "Dorfwirt Pachinger, St. Georgen · währenddessen machen wir unsere Hochzeitsfotos",
+    familyOnly: true,
+  },
+  { time: "13:30", title: "Familienfotos im Schlosspark", familyOnly: true },
+  { time: "14:30", title: "Ansprache im KRS Eisenstadt" },
+  { time: "15:00", title: "Kaffee & Kuchen im KRS Eisenstadt" },
+  { time: "16:00", title: "Neufeldersee Restaurant" },
 ];
 
 type ItineraryProps = {
-  /** Fügt die standesamtliche Trauung am Anfang hinzu (nur /familie) */
+  /** Zeigt zusätzlich den Vormittag (Standesamt/Trauung) – nur /familie */
   withStandesamt?: boolean;
 };
 
 export default function Itinerary({ withStandesamt = false }: ItineraryProps) {
-  const items = withStandesamt ? [standesamt, ...schedule] : schedule;
+  const items = withStandesamt
+    ? schedule
+    : schedule.filter((item) => !item.familyOnly);
 
   return (
     <section id="ablauf" className="bg-warm-white py-24 sm:py-32">
@@ -43,13 +55,20 @@ export default function Itinerary({ withStandesamt = false }: ItineraryProps) {
                 {items.map((item) => (
                   <li
                     key={item.time}
-                    className="flex items-baseline gap-5 border-b border-sage-light/30 pb-5 last:border-0 last:pb-0"
+                    className="flex items-baseline gap-4 border-b border-sage-light/30 pb-5 last:border-0 last:pb-0 sm:gap-5"
                   >
-                    <span className="font-display text-2xl italic text-sage-deep sm:text-3xl">
+                    <span className="w-16 shrink-0 font-display text-2xl italic text-sage-deep sm:w-20 sm:text-3xl">
                       {item.time}
                     </span>
-                    <span className="label text-xs text-forest/80 sm:text-sm">
-                      {item.title}
+                    <span>
+                      <span className="label text-xs text-forest/80 sm:text-sm">
+                        {item.title}
+                      </span>
+                      {item.note && (
+                        <span className="mt-1 block text-xs font-light leading-relaxed text-forest/55">
+                          {item.note}
+                        </span>
+                      )}
                     </span>
                   </li>
                 ))}

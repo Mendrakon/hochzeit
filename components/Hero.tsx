@@ -31,9 +31,8 @@ export default function Hero() {
           </p>
           <span className="h-px flex-1 bg-warm-white/40" />
         </div>
-        {/* TODO: Ort ergänzen, sobald die Location feststeht */}
         <p className="label mt-4 text-[0.7rem] text-warm-white/70 sm:text-xs">
-          [Ort folgt]
+          Neufelder See · Neufeld an der Leitha
         </p>
       </div>
 

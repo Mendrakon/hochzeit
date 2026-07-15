@@ -38,33 +38,40 @@ export default function Venue() {
 
           {/* Rechte Spalte: Infos + Karte */}
           <FadeIn delay={150}>
-            {/* TODO: Venue-Name & Adresse eintragen, sobald bekannt */}
+            {/* TODO: genaue Straße/Hausnummer des Seerestaurants ergänzen, falls gewünscht */}
             <h3 className="font-display text-3xl italic text-forest">
-              [Name der Location]
+              Neufelder See
             </h3>
             <p className="mt-4 text-base font-light leading-loose text-forest/75">
-              [Straße &amp; Hausnummer]
+              2491 Neufeld an der Leitha
               <br />
-              [PLZ Ort], Österreich
+              Burgenland, Österreich
             </p>
             <p className="mt-6 text-sm font-light leading-loose text-forest/60">
-              {/* TODO: Hinweise zu Parken / Anreise ergänzen */}
-              Parkplätze sind direkt vor Ort vorhanden. Details zur Anreise
-              folgen rechtzeitig vor dem Fest.
+              Wir feiern ab 16:00 Uhr direkt am Neufelder See. Parkplätze sind
+              vor Ort vorhanden – Details zur Anreise folgen rechtzeitig vor dem
+              Fest.
             </p>
 
-            {/* Statisches Map-Embed (Default: Wiener Neustadt) – später Adresse anpassen */}
+            {/* Karten-Embed – zentriert auf den Neufelder See (aus dem Maps-Link) */}
             <div className="mt-8 overflow-hidden border border-sage-light/60 shadow-md">
               <iframe
-                title="Karte zur Location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=16.20%2C47.79%2C16.30%2C47.84&layer=mapnik&marker=47.8149%2C16.2407"
+                title="Karte zum Neufelder See"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=16.3667%2C47.8634%2C16.4067%2C47.8834&layer=mapnik&marker=47.8734339%2C16.3867401"
                 className="h-64 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
             <p className="mt-3 text-center text-[0.7rem] font-light text-forest/40">
-              Vorläufige Kartenansicht (Raum Wiener Neustadt)
+              <a
+                href="https://www.google.com/maps/place/Neufelder+See/@47.8734339,16.3867401,15z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-sage-deep"
+              >
+                Neufelder See · in Google Maps öffnen
+              </a>
             </p>
           </FadeIn>
         </div>

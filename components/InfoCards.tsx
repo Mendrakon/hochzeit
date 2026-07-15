@@ -16,9 +16,9 @@ export default function InfoCards() {
           <FadeIn className="border border-sage-light/50 bg-warm-white p-8 text-center">
             <h3 className="font-display text-2xl italic text-forest">Unterkunft</h3>
             <p className="mt-4 text-sm font-light leading-loose text-forest/75">
-              {/* TODO: Hotelempfehlungen in der Nähe ergänzen */}
+              {/* TODO: konkrete Hotelempfehlungen in Neufeld/Eisenstadt ergänzen */}
               Für alle, die übernachten möchten, folgen in Kürze Empfehlungen für
-              Hotels und Pensionen in der Umgebung.
+              Hotels und Pensionen rund um Neufeld an der Leitha und Eisenstadt.
             </p>
             <p className="label mt-6 text-[0.65rem] text-sage-deep">
               Empfehlungen folgen
@@ -32,9 +32,9 @@ export default function InfoCards() {
           >
             <h3 className="font-display text-2xl italic text-forest">Transport</h3>
             <p className="mt-4 text-sm font-light leading-loose text-forest/75">
-              {/* TODO: Hinweis zu Shuttle / Parken ergänzen */}
-              Vor Ort stehen ausreichend Parkplätze zur Verfügung. Informationen
-              zu einem möglichen Shuttle-Service folgen.
+              {/* TODO: Hinweis zu Shuttle ergänzen, falls geplant */}
+              Am Neufelder See stehen ausreichend Parkplätze zur Verfügung.
+              Informationen zu einem möglichen Shuttle-Service folgen.
             </p>
             <p className="label mt-6 text-[0.65rem] text-sage-deep">Details folgen</p>
           </FadeIn>

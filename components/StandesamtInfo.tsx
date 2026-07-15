@@ -2,9 +2,10 @@ import FadeIn from "./FadeIn";
 import FlowerDivider from "./FlowerDivider";
 
 /**
- * Eigener Infoblock zur standesamtlichen Trauung – wird nur auf der
+ * Kompakter Infoblock zur standesamtlichen Trauung – wird nur auf der
  * Familien-Variante (/familie) angezeigt, da nur die engsten Verwandten
- * dabei sind.
+ * dabei sind. Der vollständige Ablauf des Tages steht im Ablauf-Bereich
+ * (siehe <Itinerary />, Vormittags-Punkte nur auf /familie).
  */
 export default function StandesamtInfo() {
   return (
@@ -16,32 +17,33 @@ export default function StandesamtInfo() {
             Standesamtliche Trauung
           </h2>
           <p className="mt-6 text-sm font-light leading-loose text-forest/70">
-            Den offiziellen Teil feiern wir im kleinen Kreis mit unseren engsten
-            Verwandten – wir freuen uns sehr, dass ihr dabei seid.
+            Den offiziellen Teil feiern wir am Vormittag im kleinen Kreis mit
+            unseren engsten Verwandten – wir freuen uns sehr, dass ihr dabei
+            seid. Ab 14:30 Uhr stoßen dann alle Gäste dazu.
           </p>
         </FadeIn>
 
         <FadeIn delay={150}>
           <div className="mt-12 border border-sage-light/70 bg-cream p-2">
             <div className="border border-sage-light/50 px-6 py-10 sm:px-12">
-              <p className="font-display text-4xl italic text-sage-deep">14:00 Uhr</p>
+              <p className="font-display text-4xl italic text-sage-deep">
+                11:00 Uhr
+              </p>
 
               <FlowerDivider className="mx-auto my-8 text-sage-deep" />
 
-              {/* TODO: Name & Adresse des Standesamts eintragen, sobald bekannt */}
+              {/* TODO: Straße & Hausnummer des Standesamts Siegendorf ergänzen */}
               <h3 className="font-display text-2xl italic text-forest">
-                [Name des Standesamts]
+                Standesamt Siegendorf
               </h3>
               <p className="mt-3 text-sm font-light leading-loose text-forest/75">
-                [Straße &amp; Hausnummer]
-                <br />
-                [PLZ Ort], Österreich
+                7011 Siegendorf, Österreich
               </p>
 
-              {/* TODO: Treffpunkt / Hinweis zur Uhrzeit anpassen */}
               <p className="mt-6 text-sm font-light leading-loose text-forest/60">
-                Bitte seid spätestens um 13:45 Uhr vor Ort. Im Anschluss geht es
-                gemeinsam weiter zum Sektempfang.
+                Bitte seid bis <strong className="font-normal">10:45 Uhr</strong>{" "}
+                vor Ort, damit alle vor der Braut Platz genommen haben. Den
+                genauen Ablauf des Tages findet ihr weiter unten.
               </p>
             </div>
           </div>
