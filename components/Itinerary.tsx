@@ -20,8 +20,8 @@ const schedule = [
     familyOnly: true,
   },
   { time: "13:30", title: "Familienfotos im Schlosspark", familyOnly: true },
-  { time: "14:30", title: "Ansprache im KRS Eisenstadt" },
-  { time: "15:00", title: "Kaffee & Kuchen im KRS Eisenstadt" },
+  { time: "14:30", title: "Ansprache im Königreichssaal Eisenstadt" },
+  { time: "15:00", title: "Kaffee & Kuchen im Königreichssaal Eisenstadt" },
   { time: "16:00", title: "Neufeldersee Restaurant" },
 ];
 

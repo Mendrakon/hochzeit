@@ -16,7 +16,6 @@ export default function Navbar({ withStandesamt = false }: NavbarProps) {
     ...(withStandesamt ? [{ href: "#trauung", label: "Trauung" }] : []),
     { href: "#location", label: "Location" },
     { href: "#ablauf", label: "Ablauf" },
-    { href: "#infos", label: "Infos" },
   ];
 
   useEffect(() => {

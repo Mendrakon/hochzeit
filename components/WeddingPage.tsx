@@ -5,7 +5,6 @@ import Countdown from "@/components/Countdown";
 import StandesamtInfo from "@/components/StandesamtInfo";
 import Venue from "@/components/Venue";
 import Itinerary from "@/components/Itinerary";
-import InfoCards from "@/components/InfoCards";
 import Footer from "@/components/Footer";
 
 type WeddingPageProps = {
@@ -33,7 +32,6 @@ export default function WeddingPage({
         {withStandesamt && <StandesamtInfo />}
         <Venue />
         <Itinerary withStandesamt={withStandesamt} />
-        <InfoCards />
       </main>
       <Footer />
     </>

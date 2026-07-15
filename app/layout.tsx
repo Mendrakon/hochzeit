@@ -20,11 +20,38 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://andi-und-lili.at"),
   title: "Andi & Lili · 11. September 2026",
   description:
-    "Die Hochzeit von Andi & Lili am 11. September 2026. Alle Infos zu Ablauf, Location und RSVP.",
+    "Die Hochzeit von Andi & Lili am 11. September 2026. Alle Infos zu Ablauf, Location und Anreise.",
   // Private Hochzeitsseite – nicht in Suchmaschinen indexieren
   robots: { index: false, follow: false },
+  // Vorschau beim Teilen (WhatsApp, Signal, iMessage …).
+  // Statisches Bild aus public/og.png – zuverlässig ausgeliefert.
+  openGraph: {
+    type: "website",
+    locale: "de_AT",
+    siteName: "Andi & Lili",
+    url: "https://andi-und-lili.at",
+    title: "Andi & Lili · 11. September 2026",
+    description:
+      "Die Hochzeit von Andi & Lili am 11. September 2026. Alle Infos zu Ablauf, Location und Anreise.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Die Hochzeit von Andi & Lili · 11. September 2026",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Andi & Lili · 11. September 2026",
+    description:
+      "Die Hochzeit von Andi & Lili am 11. September 2026. Alle Infos zu Ablauf, Location und Anreise.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({

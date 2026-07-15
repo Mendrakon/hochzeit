@@ -43,7 +43,7 @@ export default function Welcome() {
 
       <div className="mx-auto max-w-2xl px-6 text-center">
         <FadeIn>
-          <p className="label text-xs text-sage-deep">You are invited</p>
+          <p className="label text-xs text-sage-deep">Du bist eingeladen</p>
           <h2 className="mt-5 font-display text-4xl italic text-forest sm:text-5xl">
             Wir sagen Ja
           </h2>
