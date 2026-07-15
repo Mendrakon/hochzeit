@@ -1,4 +1,21 @@
+import Image from "next/image";
 import FadeIn from "./FadeIn";
+
+// Location-Fotos im Polaroid-Stil (in public/ ablegen)
+const venuePhotos = [
+  {
+    src: "/venue-1.jpg",
+    alt: "Hotel & Restaurant am Neufelder See",
+    caption: "Hotel & Restaurant",
+    rotation: -4,
+  },
+  {
+    src: "/venue-2.jpg",
+    alt: "Neufelder See mit Blick auf das Restaurant",
+    caption: "Direkt am See",
+    rotation: 5,
+  },
+];
 
 export default function Venue() {
   return (
@@ -14,24 +31,24 @@ export default function Venue() {
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
           {/* Linke Spalte: Fotos im Polaroid-Stil */}
           <FadeIn className="flex flex-wrap items-center justify-center gap-6">
-            {/* TODO: echte Location-Fotos einsetzen (public/venue-1.jpg ...) */}
-            {[-4, 5].map((rotation, i) => (
+            {venuePhotos.map((photo) => (
               <div
-                key={i}
+                key={photo.src}
                 className="bg-warm-white p-3 pb-12 shadow-xl"
-                style={{ transform: `rotate(${rotation}deg)` }}
+                style={{ transform: `rotate(${photo.rotation}deg)` }}
               >
-                <div
-                  className="flex h-48 w-44 items-center justify-center sm:h-56 sm:w-52"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, #A7B4A2 0%, #556B4E 100%)",
-                  }}
-                >
-                  <span className="label text-[0.6rem] text-warm-white/80">
-                    Foto folgt
-                  </span>
+                <div className="relative h-48 w-44 overflow-hidden sm:h-56 sm:w-52">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(min-width: 640px) 13rem, 11rem"
+                    className="object-cover"
+                  />
                 </div>
+                <span className="label mt-3 block text-center text-[0.6rem] text-forest/50">
+                  {photo.caption}
+                </span>
               </div>
             ))}
           </FadeIn>
