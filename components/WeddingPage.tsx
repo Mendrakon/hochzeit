@@ -5,11 +5,12 @@ import Countdown from "@/components/Countdown";
 import StandesamtInfo from "@/components/StandesamtInfo";
 import Venue from "@/components/Venue";
 import Itinerary from "@/components/Itinerary";
+import InfoCards from "@/components/InfoCards";
 import Footer from "@/components/Footer";
 
 type WeddingPageProps = {
   /**
-   * true = Familien-Variante (/familie): zeigt zusätzlich die
+   * true = Standesamt-Variante (/standesamt): zeigt zusätzlich die
    * standesamtliche Trauung im Ablauf und einen eigenen Infoblock.
    */
   withStandesamt?: boolean;
@@ -32,6 +33,7 @@ export default function WeddingPage({
         {withStandesamt && <StandesamtInfo />}
         <Venue />
         <Itinerary withStandesamt={withStandesamt} />
+        <InfoCards />
       </main>
       <Footer />
     </>

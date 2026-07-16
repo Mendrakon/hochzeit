@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 type NavbarProps = {
-  /** Zeigt zusätzlich den Trauungs-Link (nur Familien-Variante /familie) */
+  /** Zeigt zusätzlich den Trauungs-Link (nur Standesamt-Variante /standesamt) */
   withStandesamt?: boolean;
 };
 
@@ -16,6 +16,7 @@ export default function Navbar({ withStandesamt = false }: NavbarProps) {
     ...(withStandesamt ? [{ href: "#trauung", label: "Trauung" }] : []),
     { href: "#location", label: "Location" },
     { href: "#ablauf", label: "Ablauf" },
+    { href: "#infos", label: "Infos" },
   ];
 
   useEffect(() => {

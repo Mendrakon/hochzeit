@@ -66,8 +66,7 @@ export default function Venue() {
             </p>
             <p className="mt-6 text-sm font-light leading-loose text-forest/60">
               Wir feiern ab 16:00 Uhr direkt am Neufelder See. Parkplätze sind
-              vor Ort vorhanden – Details zur Anreise folgen rechtzeitig vor dem
-              Fest.
+              vor Ort vorhanden.
             </p>
 
             {/* Karten-Embed – zentriert auf den Neufelder See (aus dem Maps-Link) */}

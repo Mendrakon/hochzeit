@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import WeddingPage from "@/components/WeddingPage";
 
-const familieDescription =
-  "Die Hochzeit von Andi & Lili am 11. September 2026 – Infos für die engsten Verwandten inkl. standesamtlicher Trauung.";
+const standesamtDescription =
+  "Die Hochzeit von Andi & Lili am 11. September 2026 – Infos für den engsten Kreis inkl. standesamtlicher Trauung.";
 
 export const metadata: Metadata = {
   title: "Andi & Lili · 11. September 2026",
-  description: familieDescription,
+  description: standesamtDescription,
   // Diese Variante soll nicht in Suchmaschinen auftauchen
   robots: { index: false, follow: false },
   openGraph: {
     type: "website",
     locale: "de_AT",
     siteName: "Andi & Lili",
-    url: "https://andi-und-lili.at/familie",
+    url: "https://andi-und-lili.at/standesamt",
     title: "Andi & Lili · 11. September 2026",
-    description: familieDescription,
+    description: standesamtDescription,
     images: [
       {
         url: "/og.png",
@@ -28,12 +28,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Andi & Lili · 11. September 2026",
-    description: familieDescription,
+    description: standesamtDescription,
     images: ["/og.png"],
   },
 };
 
-// Variante für die engsten Verwandten (mit standesamtlicher Trauung)
-export default function FamiliePage() {
+// Variante für den engsten Kreis (mit standesamtlicher Trauung)
+export default function StandesamtPage() {
   return <WeddingPage withStandesamt />;
 }

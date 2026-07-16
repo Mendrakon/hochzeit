@@ -3,9 +3,9 @@ import FlowerDivider from "./FlowerDivider";
 
 /**
  * Kompakter Infoblock zur standesamtlichen Trauung – wird nur auf der
- * Familien-Variante (/familie) angezeigt, da nur die engsten Verwandten
- * dabei sind. Der vollständige Ablauf des Tages steht im Ablauf-Bereich
- * (siehe <Itinerary />, Vormittags-Punkte nur auf /familie).
+ * Standesamt-Variante (/standesamt) angezeigt, da nur die engsten Freunde
+ * und Verwandten dabei sind. Der vollständige Ablauf des Tages steht im
+ * Ablauf-Bereich (siehe <Itinerary />, Vormittags-Punkte nur auf /standesamt).
  */
 export default function StandesamtInfo() {
   return (
@@ -18,8 +18,8 @@ export default function StandesamtInfo() {
           </h2>
           <p className="mt-6 text-sm font-light leading-loose text-forest/70">
             Den offiziellen Teil feiern wir am Vormittag im kleinen Kreis mit
-            unseren engsten Verwandten – wir freuen uns sehr, dass ihr dabei
-            seid. Ab 14:30 Uhr stoßen dann alle Gäste dazu.
+            unseren engsten Freunden und Verwandten – wir freuen uns sehr, dass
+            ihr dabei seid. Ab 14:30 Uhr stoßen dann alle Gäste dazu.
           </p>
         </FadeIn>
 

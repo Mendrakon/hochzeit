@@ -10,16 +10,16 @@ WhatsApp zugesagt, daher gibt es **kein RSVP-Formular**.
 
 ### Zwei Einladungsvarianten (zwei Routen)
 
-Beim Standesamt sind nur die engsten Verwandten dabei. Deshalb gibt es zwei
-Versionen derselben Seite, die sich einen gemeinsamen Aufbau teilen
-(`components/WeddingPage.tsx`):
+Beim Standesamt sind nur die engsten Freunde und Verwandten dabei. Deshalb
+gibt es zwei Versionen derselben Seite, die sich einen gemeinsamen Aufbau
+teilen (`components/WeddingPage.tsx`):
 
-| Route       | Für wen            | Besonderheit                                              |
-|-------------|--------------------|----------------------------------------------------------|
-| `/`         | Alle Gäste         | Ablauf ab Sektempfang, **ohne** Standesamt               |
-| `/familie`  | Engste Verwandte   | Zusätzlich Standesamt im Ablauf **und** eigener Infoblock |
+| Route         | Für wen                       | Besonderheit                                              |
+|---------------|-------------------------------|-----------------------------------------------------------|
+| `/`           | Alle Gäste                    | Ablauf ab Sektempfang, **ohne** Standesamt                |
+| `/standesamt` | Engste Freunde & Verwandte    | Zusätzlich Standesamt im Ablauf **und** eigener Infoblock |
 
-Der `/familie`-Link wird **nirgends öffentlich verlinkt** (und ist auf
+Der `/standesamt`-Link wird **nirgends öffentlich verlinkt** (und ist auf
 `noindex` gesetzt) – er wird gezielt an die betreffenden Gäste verschickt.
 
 ---
@@ -80,7 +80,7 @@ Salbeigrün-dominiert mit Creme/Blush und **Bordeaux nur als sparsamer Akzent**
   11. September 2026 · [Ort]
   ```
 - Sticky Navbar oben: `START | LOCATION | ABLAUF | INFOS`
-  (Familien-Variante zusätzlich: `TRAUUNG`)
+  (Standesamt-Variante zusätzlich: `TRAUUNG`)
 - Scroll-Down-Arrow (animiert)
 
 ### 2. Willkommen / "You are invited"
@@ -105,27 +105,26 @@ Salbeigrün-dominiert mit Creme/Blush und **Bordeaux nur als sparsamer Akzent**
 - Stil: Karte mit Spitzenrand-Optik (CSS border-image oder SVG-Frame)
 - Zeitplan-Tabelle:
   ```
-  14:00  Standesamtliche Trauung   ← nur Familien-Variante (/familie)
+  14:00  Standesamtliche Trauung   ← nur Standesamt-Variante (/standesamt)
   15:00  Sektempfang
   16:30  Fotos
   18:00  Abendessen
   20:00  Tortenanschnitt
   21:00  Party
   ```
-- Der `14:00`-Eintrag wird via `withStandesamt`-Prop nur auf `/familie` gezeigt
+- Der `14:00`-Eintrag wird via `withStandesamt`-Prop nur auf `/standesamt` gezeigt
 - Zeiten und Programmpunkte sind Platzhalter → einfach anpassbar (in `components/Itinerary.tsx`)
 
-### 5b. Standesamt-Info (nur `/familie`)
-- Eigene Sektion `components/StandesamtInfo.tsx`, wird nur in der Familien-Variante gerendert
+### 5b. Standesamt-Info (nur `/standesamt`)
+- Eigene Sektion `components/StandesamtInfo.tsx`, wird nur in der Standesamt-Variante gerendert
 - Eingebettet zwischen Countdown und Location
 - Inhalt: Uhrzeit (14:00), Name & Adresse des Standesamts (Platzhalter), Treffpunkt-Hinweis
 - Kein Dresscode (gibt es nicht)
 
 ### 6. Weitere Infos
-- Zweispaltig (auf Mobile einspaltig):
+- Einzelne, zentrierte Karte:
   - **Unterkunft:** Hotelempfehlungen in der Nähe (Platzhalter)
-  - **Transport:** Hinweis zu Shuttle / Parken (Platzhalter)
-- **Kein Dresscode** (gibt es nicht) und **kein RSVP** (Zusagen über WhatsApp)
+- **Kein Dresscode** (gibt es nicht), **kein RSVP** (Zusagen über WhatsApp) und **kein Transport-Block** (wurde entfernt)
 
 ### 8. Footer
 - Kleines `A & L` Monogramm (CSS oder SVG)
@@ -141,8 +140,8 @@ Salbeigrün-dominiert mit Creme/Blush und **Bordeaux nur als sparsamer Akzent**
 ├── app/
 │   ├── layout.tsx          # Root layout, Google Fonts, Metadata
 │   ├── page.tsx            # Route "/"        → <WeddingPage />
-│   ├── familie/
-│   │   └── page.tsx        # Route "/familie" → <WeddingPage withStandesamt />
+│   ├── standesamt/
+│   │   └── page.tsx        # Route "/standesamt" → <WeddingPage withStandesamt />
 │   └── globals.css         # Tailwind v4 @theme (Farben, Fonts) + Custom CSS
 ├── components/
 │   ├── WeddingPage.tsx     # Gemeinsamer Seitenaufbau beider Varianten
@@ -150,7 +149,7 @@ Salbeigrün-dominiert mit Creme/Blush und **Bordeaux nur als sparsamer Akzent**
 │   ├── Hero.tsx
 │   ├── Welcome.tsx
 │   ├── Countdown.tsx
-│   ├── StandesamtInfo.tsx  # Nur Familien-Variante
+│   ├── StandesamtInfo.tsx  # Nur Standesamt-Variante
 │   ├── Venue.tsx
 │   ├── Itinerary.tsx       # Prop: withStandesamt (zeigt 14:00-Eintrag)
 │   ├── InfoCards.tsx

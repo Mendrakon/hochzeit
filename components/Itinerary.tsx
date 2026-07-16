@@ -3,7 +3,7 @@ import FlowerDivider from "./FlowerDivider";
 
 // Der komplette Ablauf des Hochzeitstags (11.09.2026), 10:30–16:00 Uhr.
 // Die Vormittags-Punkte (Standesamt, Trauung, Familienfotos) sind nur für die
-// engsten Verwandten → familyOnly. Ab 14:30 Uhr sind ALLE Gäste dabei.
+// engsten Freunde und Verwandten → familyOnly. Ab 14:30 Uhr sind ALLE Gäste dabei.
 // Interne Planungsnotizen (Telefonnummern, Fahrhinweise) bewusst weggelassen.
 const schedule = [
   {
@@ -26,7 +26,7 @@ const schedule = [
 ];
 
 type ItineraryProps = {
-  /** Zeigt zusätzlich den Vormittag (Standesamt/Trauung) – nur /familie */
+  /** Zeigt zusätzlich den Vormittag (Standesamt/Trauung) – nur /standesamt */
   withStandesamt?: boolean;
 };
 
