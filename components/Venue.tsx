@@ -55,12 +55,13 @@ export default function Venue() {
 
           {/* Rechte Spalte: Infos + Karte */}
           <FadeIn delay={150}>
-            {/* TODO: genaue Straße/Hausnummer des Seerestaurants ergänzen, falls gewünscht */}
             <h3 className="font-display text-3xl italic text-forest">
               Neufelder See
             </h3>
             <p className="mt-4 text-base font-light leading-loose text-forest/75">
-              2491 Neufeld an der Leitha
+              Neufeldersee Hotel &amp; Restaurant
+              <br />
+              Eisenstädter Straße 35, 2491 Neufeld an der Leitha
               <br />
               Burgenland, Österreich
             </p>
@@ -69,11 +70,11 @@ export default function Venue() {
               vor Ort vorhanden.
             </p>
 
-            {/* Karten-Embed – zentriert auf den Neufelder See (aus dem Maps-Link) */}
+            {/* Karten-Embed – zentriert auf das Neufeldersee Hotel & Restaurant */}
             <div className="mt-8 overflow-hidden border border-sage-light/60 shadow-md">
               <iframe
-                title="Karte zum Neufelder See"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=16.3667%2C47.8634%2C16.4067%2C47.8834&layer=mapnik&marker=47.8734339%2C16.3867401"
+                title="Karte zum Neufeldersee Hotel & Restaurant"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=16.3660%2C47.8557%2C16.4060%2C47.8757&layer=mapnik&marker=47.8656556%2C16.3860378"
                 className="h-64 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -81,12 +82,12 @@ export default function Venue() {
             </div>
             <p className="mt-3 text-center text-[0.7rem] font-light text-forest/40">
               <a
-                href="https://www.google.com/maps/place/Neufelder+See/@47.8734339,16.3867401,15z"
+                href="https://www.google.com/maps/search/?api=1&query=Neufeldersee+Hotel+%26+Restaurant%2C+Eisenst%C3%A4dter+Stra%C3%9Fe+35%2C+2491+Neufeld+an+der+Leitha"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-sage-deep"
               >
-                Neufelder See · in Google Maps öffnen
+                Neufeldersee Hotel &amp; Restaurant · in Google Maps öffnen
               </a>
             </p>
           </FadeIn>

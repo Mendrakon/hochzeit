@@ -123,7 +123,7 @@ Salbeigrün-dominiert mit Creme/Blush und **Bordeaux nur als sparsamer Akzent**
 
 ### 6. Weitere Infos
 - Einzelne, zentrierte Karte:
-  - **Unterkunft:** Hotelempfehlungen in der Nähe (Platzhalter)
+  - **Unterkunft:** Hinweis, sich bei Bedarf rechtzeitig bei Andi & Lili zu melden (keine Hotel-Empfehlungen auf der Seite)
 - **Kein Dresscode** (gibt es nicht), **kein RSVP** (Zusagen über WhatsApp) und **kein Transport-Block** (wurde entfernt)
 
 ### 8. Footer
@@ -175,7 +175,6 @@ Salbeigrün-dominiert mit Creme/Blush und **Bordeaux nur als sparsamer Akzent**
 - **Location** (Venue-Name, Adresse, Maps-Link) ist Platzhalter → wird nachgetragen
 - **Standesamt** (Name, Adresse, Treffpunkt in `StandesamtInfo.tsx`) ist Platzhalter → wird nachgetragen
 - **Zeiten im Ablauf** sind Platzhalter → werden nachgetragen
-- **Hotel-Empfehlungen** sind Platzhalter
 - Alle Platzhalter sind mit `{/* TODO: ... */}` Kommentaren im Code markiert
 - Scroll-Animationen: `IntersectionObserver` in einem `useEffect` Hook, kein externes Animations-Package nötig
 - `next/image` für alle Bilder verwenden
@@ -192,5 +191,4 @@ Salbeigrün-dominiert mit Creme/Blush und **Bordeaux nur als sparsamer Akzent**
 | Venue-Name & Adresse         | Später        |
 | Standesamt-Name & Adresse    | Später        |
 | Genauer Ablauf / Zeiten      | Später        |
-| Hotel-Empfehlungen           | Später        |
 | Domain (z.B. andi-und-lili.at) | Bei Vercel-Setup |

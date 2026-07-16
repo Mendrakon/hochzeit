@@ -18,12 +18,11 @@ export default function InfoCards() {
               Unterkunft
             </h3>
             <p className="mt-4 text-sm font-light leading-loose text-forest/75">
-              {/* TODO: Hotelempfehlungen in der Nähe ergänzen */}
-              Für alle, die übernachten möchten, folgen in Kürze Empfehlungen
-              für Hotels und Pensionen in der Umgebung.
+              Solltet ihr eine Unterkunft benötigen, meldet euch bitte
+              rechtzeitig bei uns – wir helfen euch gerne weiter.
             </p>
             <p className="label mt-6 text-[0.65rem] text-sage-deep">
-              Empfehlungen folgen
+              Einfach bei uns melden
             </p>
           </FadeIn>
         </div>
